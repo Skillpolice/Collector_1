@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2059430971700177359}
   - component: {fileID: -6380319924550943383}
   - component: {fileID: -5512269913700485196}
+  - component: {fileID: 4321892520383417346}
   m_Layer: 0
   m_Name: playerShip2_red
   m_TagString: Untagged
@@ -150,3 +151,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4321892520383417346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052894243206396083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e999d035ff11dd4b9a3b7d86da902d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  newSpeed: 0
+  Amplitude: 5
+  isZigZag: 0
+  isDiagonal: 0
+  target: {x: 0, y: -7}

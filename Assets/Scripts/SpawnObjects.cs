@@ -15,12 +15,26 @@ public class SpawnObjects : MonoBehaviour
     public float stepBad;
     public float stepSpecial;
 
+    public float speedModificator = 1.25f;
+    public float stepSpeed = 5f;
+    float speedKoef;
+
     private void Start()
     {
+        speedKoef = 1;
+        InvokeRepeating(nameof(IncreaseSpeed), startTime, stepSpeed);
+
+
         InvokeRepeating(nameof(GoodO), startTime, stepGood);
         InvokeRepeating(nameof(BadO), startTime, stepBad);
         InvokeRepeating(nameof(SpecialO), startTime, stepSpecial);
     }
+
+    void IncreaseSpeed()
+    {
+        speedKoef *= speedModificator;
+    }
+
     void GoodO()
     {
         StepSpawnObjects(goodObject);

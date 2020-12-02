@@ -15,7 +15,7 @@ public class GoodObject : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Cart"))
+        if (collision.gameObject.CompareTag("Pad"))
         {
             gameManager.AddScore(pointScore);
             Destroy(gameObject);
