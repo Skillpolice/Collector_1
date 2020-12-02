@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class MoveObjects : MonoBehaviour
 {
-    public int pointDamage;
-    public int pointScore;
-
+   
     public float speed;
     public float newSpeed;
     public float Amplitude;
@@ -17,22 +15,15 @@ public class MoveObjects : MonoBehaviour
     public Vector2 target;
 
     Rigidbody2D rb;
-    GameManager gameManager;
-
 
     Vector2 force;
     Vector3 point;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        gameManager = FindObjectOfType<GameManager>();
     }
     void Start()
     {
-        if (gameManager.score > 5)
-        {
-            speed = newSpeed;
-        }
         FallMethod();
     }
 
@@ -67,17 +58,5 @@ public class MoveObjects : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Cart"))
-        {
-            gameManager.AddScore(pointScore);
-            Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("Floor"))
-        {
-            //gameManager.Damage(pointDamage);
-            Destroy(gameObject);
-        }
-    }
 }
+ 

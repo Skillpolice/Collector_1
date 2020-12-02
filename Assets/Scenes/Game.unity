@@ -274,8 +274,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodObject:
   - {fileID: 2612404201648732902, guid: b1db9e050dcec3f4fb4a2a4f4b47fb18, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
   badObject: []
   specialObject: []
   startTime: 0

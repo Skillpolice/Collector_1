@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class GoodObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int pointDamage;
+    public int pointScore;
 
-    // Update is called once per frame
-    void Update()
+    GameManager gameManager;
+
+    void Awake()
     {
-        
+        gameManager = FindObjectOfType<GameManager>();
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Cart"))
+        {
+            gameManager.AddScore(pointScore);
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            gameManager.Damage(pointDamage);
+            Destroy(gameObject);
+        }
     }
 }
