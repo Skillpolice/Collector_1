@@ -6,6 +6,8 @@ TagManager:
   tags:
   - SpecialObjects
   - Pad
+  - GoodO
+  - WallButtom
   layers:
   - Default
   - TransparentFX

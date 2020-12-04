@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: -9201458798399650498}
   - component: {fileID: -4421947774160091126}
   - component: {fileID: -7221967523755473185}
+  - component: {fileID: 6896648717638561291}
   m_Layer: 0
   m_Name: playerShip2_green
-  m_TagString: Untagged
+  m_TagString: GoodO
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3536641469206605738}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -6.690198, y: -3.878619, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &1050527557549048760
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -94,7 +95,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 3536641469206605738}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1f8efb2a60cda4141bddecc18eee018f, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -163,11 +164,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e999d035ff11dd4b9a3b7d86da902d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointDamage: 4
-  pointScore: 0
-  speed: 0
-  newSpeed: 0
-  Amplitude: 0
-  isZigZag: 0
+  speed: 1
+  newSpeed: 2
+  Amplitude: 3
+  isZigZag: 1
   isDiagonal: 0
-  target: {x: 0, y: 0}
+  target: {x: 0, y: -7}
+--- !u!114 &6896648717638561291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3536641469206605738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bad8b00421efed42a2a88a4c71e2815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointDamage: -1
+  pointScore: 10

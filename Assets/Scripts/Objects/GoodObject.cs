@@ -20,7 +20,7 @@ public class GoodObject : MonoBehaviour
             gameManager.AddScore(pointScore);
             Destroy(gameObject);
         }
-        if (collision.gameObject.CompareTag("Floor"))
+        if (collision.gameObject.CompareTag("WallButtom"))
         {
             gameManager.Damage(pointDamage);
             Destroy(gameObject);

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -2438517079150473610}
   - component: {fileID: 6377590031305563949}
   - component: {fileID: -5650912620630363507}
+  - component: {fileID: -8407346433639535264}
   m_Layer: 0
   m_Name: _eart
   m_TagString: Untagged
@@ -224,9 +225,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e999d035ff11dd4b9a3b7d86da902d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 3
   newSpeed: 0
   Amplitude: 5
   isZigZag: 0
   isDiagonal: 0
   target: {x: 0, y: -7}
+--- !u!114 &-8407346433639535264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8311290325379069604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2368c6a707ebc8f42af38e8905e1e12e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointDamage: 1
+  speed: 2

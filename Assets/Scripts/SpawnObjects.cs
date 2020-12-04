@@ -23,11 +23,18 @@ public class SpawnObjects : MonoBehaviour
     {
         speedKoef = 1;
         InvokeRepeating(nameof(IncreaseSpeed), startTime, stepSpeed);
-
-
         InvokeRepeating(nameof(GoodO), startTime, stepGood);
         InvokeRepeating(nameof(BadO), startTime, stepBad);
         InvokeRepeating(nameof(SpecialO), startTime, stepSpecial);
+
+        StartCoroutine(TestDelay(3f));
+    }
+
+    IEnumerator TestDelay(float delay)
+    {
+        print("Delay Start");
+        yield return new WaitForSeconds(delay); //время через которое появиться
+        print("Delay finished");
     }
 
     void IncreaseSpeed()
@@ -54,7 +61,11 @@ public class SpawnObjects : MonoBehaviour
     {
         int randomIndex = Random.Range(0, objects.Length);
         Vector2 dropPosition = new Vector2(Random.Range(-8f, 8f), 6f);
-        Instantiate(objects[randomIndex], dropPosition, Quaternion.identity);
+
+        Rigidbody2D newObject = Instantiate(objects[randomIndex], dropPosition, Quaternion.identity);
+
+        MoveObjects moveObjects = newObject.GetComponent<MoveObjects>();
+        moveObjects.speed *= speedKoef;
     }
 
 }

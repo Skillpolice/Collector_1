@@ -95,7 +95,9 @@ public class GameManager : MonoBehaviour
 
         if (lifeCount <= 0)
         {
-            RestartLevel();
+            isPauseActive = true;
+            gameOverPanel.SetActive(true);
+            Cursor.visible = true;
         }
     }
     public void RestartLevel()
